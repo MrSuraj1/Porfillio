@@ -1,0 +1,46 @@
+
+    .gradient-text {
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-item {
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 0%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+      transition: height 0.3s ease;
+    }
+
+    .nav-item:hover {
+      transform: translateX(5px);
+    }
+
+    .nav-item:hover::after {
+      height: 100%;
+    }
+
+    .nav-item.active {
+      background: rgba(139, 92, 246, 0.1);
+      border-left: 3px solid #8b5cf6;
+      color: #8b5cf6;
+    }
+
+    .section {
+      scroll-margin-top: 80px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
