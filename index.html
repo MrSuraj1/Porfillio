@@ -7,73 +7,26 @@
   <title>Responsive Sidebar Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .gradient-text {
-      background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .nav-item {
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .nav-item::after {
-      content: '';
-      position: absolute;
-      width: 3px;
-      height: 0%;
-      left: 0;
-      top: 0;
-      background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-      transition: height 0.3s ease;
-    }
-
-    .nav-item:hover {
-      transform: translateX(5px);
-    }
-
-    .nav-item:hover::after {
-      height: 100%;
-    }
-
-    .nav-item.active {
-      background: rgba(139, 92, 246, 0.1);
-      border-left: 3px solid #8b5cf6;
-      color: #8b5cf6;
-    }
-
-    .section {
-      scroll-margin-top: 80px;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <link rel="stylesheet" href="asset/css/style.css">
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 dark:text-white font-sans">
   <div class="md:flex">
-    <!-- Sidebar -->
+ 
     <aside class="w-full md:w-64 bg-white dark:bg-gray-800 shadow-md md:fixed md:h-screen">
-      <!-- Dark Mode Toggle Button -->
+
       <div class="p-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
         <h2 class="text-lg font-bold text-gray-700 dark:text-gray-200">Menu</h2>
         <button id="themeToggle" class="text-xl">🌙</button>
       </div>
 
-      <!-- Profile Section -->
+
       <div class="p-6 flex flex-col items-center border-b border-gray-200 dark:border-gray-700">
-        <img src="./assets/images/my-avatar.png" class="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
+        <img src="./asset/img/my-avatar.png" class="w-28 h-28 rounded-full border-4 border-white shadow-lg object-cover" />
         <h1 class="text-xl font-bold mt-4 gradient-text">Suraj Kumar</h1>
         <p class="text-gray-600 dark:text-gray-400 text-sm">Full Stack Developer</p>
       </div>
 
-      <!-- Navigation -->
       <nav class="p-4">
         <ul class="space-y-2">
           <li><a href="#home" class="nav-item active flex items-center px-4 py-3 rounded-lg"><i class="fas fa-home mr-3"></i>Home</a></li>
@@ -84,7 +37,7 @@
         </ul>
       </nav>
 
-      <!-- Social Icons -->
+  
       <div class="p-6 border-t border-gray-200 dark:border-gray-700">
         <h3 class="text-sm font-semibold text-gray-500 mb-3">CONNECT WITH ME</h3>
         <div class="flex space-x-4">
@@ -97,11 +50,11 @@
     </aside>
 
     <main class="flex-1 mt-10 md:mt-0 md:ml-64">
-      <!-- Sections -->
+     
       <section id="home" class="section min-h-screen flex items-center px-6 md:px-16 py-12">
         <div class="max-w-3xl mx-auto">
           <p class="text-purple-600 font-medium mb-3">HELLO THERE 👋</p>
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">I'm <span class="gradient-text">Alex Johnson</span></h1>
+          <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">I'm <span class="gradient-text">Suraj Kumar</span></h1>
           <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Full Stack Developer</h2>
           <p class="text-gray-500 mb-8 leading-relaxed">I specialize in building beautiful, functional websites and applications with modern technologies.</p>
           <div class="flex flex-wrap gap-4">
@@ -157,14 +110,14 @@
         </div>
       </section>
 
-      <!-- Add more sections like skills, projects, contact here if needed -->
+      
          <section id="skills" class="section py-20 px-6 md:px-12 bg-gray-50">
                 <div class="max-w 4xl mx-auto">
                     <h2 class="text-3xl font-bold text-gray-800 mb-12">
                         My <span class="gradient-text">Skills</span>
                     </h2>
                     <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Frontend Skills -->
+                      
                         <div class="bg-white p-6 rounded-xl shadow-sm">
                             <h3 class="text-xl font-semibold flex items-center text-gray-800 mb-4">
                                 <i class="fas fa-laptop-code text-blue-500 mr-2"></i>
@@ -220,7 +173,7 @@
                             </div>
                         </div>
                         
-                        <!-- Backend Skills -->
+                       
                         <div class="bg-white p-6 rounded-xl shadow-sm">
                             <h3 class="text-xl font-semibold flex items-center text-gray-800 mb-4">
                                 <i class="fas fa-server text-purple-500 mr-2"></i>
@@ -368,34 +321,8 @@
                     </main>
   </div>
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
+  <script src="asset/js/javascript.js">
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const themeBtn = document.getElementById("themeToggle");
-      const html = document.documentElement;
-
-      // Load saved theme
-      if (localStorage.getItem("theme") === "dark") {
-        html.classList.add("dark");
-        themeBtn.textContent = "☀️";
-      } else {
-        themeBtn.textContent = "🌙";
-      }
-
-      themeBtn.addEventListener("click", () => {
-        html.classList.toggle("dark");
-        if (html.classList.contains("dark")) {
-          themeBtn.textContent = "☀️";
-          localStorage.setItem("theme", "dark");
-        } else {
-          themeBtn.textContent = "🌙";
-          localStorage.setItem("theme", "light");
-        }
-      });
-    });
   </script>
 </body>
 
