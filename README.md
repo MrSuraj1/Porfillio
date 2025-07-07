@@ -4,7 +4,7 @@
 
 Welcome to my personal developer portfolio website! This site is a reflection of my journey as a Full Stack Developer and includes my projects, skills, experience, and contact information.
 
-🔗 **Live Site**: [https://surajportfolio.com](https://surajportfolio.com)  
+🔗 **Live Site**: [[https://surajportfolio.com](https://mrsuraj1.github.io/Portfolio/)]
 📂 **Repository**: [GitHub](https://github.com/surajdev/portfolio)
 
 ---
